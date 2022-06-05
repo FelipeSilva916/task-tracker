@@ -21,7 +21,11 @@ function App() {
   ]);
 
   //add Task
-  const addTask = (task) => {};
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
+  };
 
   //delete task function
   const deleteTask = (id) => {
